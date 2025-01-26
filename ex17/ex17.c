@@ -104,15 +104,14 @@ void Database_set(const Connection *conn, const int id, const char *name, const 
 	if (addr->set) {
 		die("Already set, delete it first");
 	}
-	addr->set = 1;
-	// Warning bug: read how to break it and fix it
-	char *res = strncpy(addr->name, name, MAX_DATA);
+	int res = strlcpy(addr->name, name, MAX_DATA);
+	
 	// demonstrate the strncpy bug
 	if (!res) {
 		die("name copy failed");
 	}
 
-	res = strncpy(addr->email, email, MAX_DATA);
+	res = strlcpy(addr->email, email, MAX_DATA);
 	if (!res) {
 		die("email copy failed");
 	}
@@ -129,6 +128,18 @@ void Database_list(const Connection *conn) {
 		if (curr->set) {
 			Address_print(curr);
 		}
+	}
+}
+
+void Database_close(const Connection *conn) {
+	if (conn) {
+		if (conn->file) {
+			fclose(conn->file);
+		}
+		if (conn->db) {
+			free(conn->db);
+		}
+		free((Connection *) conn);
 	}
 }
 
@@ -188,8 +199,9 @@ int main(int argc, char **argv) {
 		
 		default:
 			die("Invalid action: c=create, g=get, s=set, d=del, l=list");
-
 	}
+
+	Database_close(conn);
 
 	return 0;
 }
