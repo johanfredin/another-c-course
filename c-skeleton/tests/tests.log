@@ -1,0 +1,7 @@
+DEBUG tests/libex29_tests.c:73: ----- RUNNING: ./tests/libex29_tests
+DEBUG tests/libex29_tests.c:65: 
+----- test_dlopen
+DEBUG tests/libex29_tests.c:66: 
+----- test_functions
+[ERROR] (tests/libex29_tests.c:12: errno: None) Did not find print_a_message function in the library build/libYOUR_LIBRARY.so: build/libYOUR_LIBRARY.so: undefined symbol: print_a_message
+[ERROR] (tests/libex29_tests.c:35: errno: None) print_a_message failed.
