@@ -1,0 +1,28 @@
+DEBUG tests/list_tests.c:136: ----- RUNNING: ./tests/list_tests
+DEBUG tests/list_tests.c:136: argc=1
+DEBUG tests/list_tests.c:128: 
+----- test_push_front
+DEBUG tests/list_tests.c:129: 
+----- test_push_pop
+DEBUG tests/list_tests.c:130: 
+----- test_pop_front
+DEBUG tests/list_tests.c:131: 
+----- test_remove
+DEBUG tests/list_tests.c:132: 
+----- test_copy
+*** buffer overflow detected ***: terminated
+Aborted (core dumped)
+DEBUG tests/list_tests.c:136: ----- RUNNING: ./tests/list_tests
+DEBUG tests/list_tests.c:136: argc=1
+DEBUG tests/list_tests.c:128: 
+----- test_push_front
+DEBUG tests/list_tests.c:129: 
+----- test_push_pop
+DEBUG tests/list_tests.c:130: 
+----- test_pop_front
+DEBUG tests/list_tests.c:131: 
+----- test_remove
+DEBUG tests/list_tests.c:132: 
+----- test_copy
+*** buffer overflow detected ***: terminated
+Aborted (core dumped)

@@ -9,7 +9,7 @@
 
 #define mu_suite_start() char *message = NULL
 
-#define mu_assert(test, message) \
+#define mu_assert(test, message, ...) \
 	if (!(test)) {               \
 		log_err(message);        \
 		return message;          \
@@ -21,12 +21,10 @@
 	tests_run++;                   \
 	if (message) return message;
 
-    
 #define RUN_TESTS(name)                         \
 	int main(int argc, char *argv[]) {          \
 		debug("----- RUNNING: %s", argv[0]);    \
-		debug("argc=%d", argc);					\
-		printf("--------\nRUNNING: %s\n", argv[0]); \
+		printf("----\nRUNNING: %s\n", argv[0]); \
 		char *result = name();                  \
 		if (result != 0) {                      \
 			printf("FAILED: %s\n", result);     \

@@ -34,7 +34,7 @@ TESTS=$(patsubst %.c,%,$(TEST_SRC))
 
 # Create liblcthw.a in local build directory.
 # Create liblcthw.so in same directory turning the .a into a .so file
-TARGET=build/libYOUR_LIBRARY.a
+TARGET=build/libex29.a
 SO_TARGET=$(patsubst %.a,%.so,$(TARGET))
 
 # The target build

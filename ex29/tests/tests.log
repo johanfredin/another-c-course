@@ -1,0 +1,42 @@
+DEBUG tests/libex29_tests.c:64: ----- RUNNING: ./tests/libex29_tests
+DEBUG tests/libex29_tests.c:56: 
+----- test_dlopen
+DEBUG tests/libex29_tests.c:57: 
+----- test_functions
+Segmentation fault (core dumped)
+DEBUG tests/libex29_tests.c:64: ----- RUNNING: ./tests/libex29_tests
+DEBUG tests/libex29_tests.c:56: 
+----- test_dlopen
+DEBUG tests/libex29_tests.c:57: 
+----- test_functions
+DEBUG tests/libex29_tests.c:58: 
+----- test_failures
+DEBUG tests/libex29_tests.c:59: 
+----- test_dlclose
+DEBUG tests/libex29_tests.c:64: ----- RUNNING: ./tests/libex29_tests
+DEBUG tests/libex29_tests.c:56: 
+----- test_dlopen
+DEBUG tests/libex29_tests.c:57: 
+----- test_functions
+Segmentation fault (core dumped)
+DEBUG tests/libex29_tests.c:64: ----- RUNNING: ./tests/libex29_tests
+DEBUG tests/libex29_tests.c:56: 
+----- test_dlopen
+DEBUG tests/libex29_tests.c:57: 
+----- test_functions
+Segmentation fault (core dumped)
+DEBUG tests/libex29_tests.c:64: ----- RUNNING: ./tests/libex29_tests
+DEBUG tests/libex29_tests.c:56: 
+----- test_dlopen
+DEBUG tests/libex29_tests.c:57: 
+----- test_functions
+[ERROR] (tests/libex29_tests.c:36: errno: None) tolowercase failed
+DEBUG tests/libex29_tests.c:64: ----- RUNNING: ./tests/libex29_tests
+DEBUG tests/libex29_tests.c:56: 
+----- test_dlopen
+DEBUG tests/libex29_tests.c:57: 
+----- test_functions
+DEBUG tests/libex29_tests.c:58: 
+----- test_failures
+DEBUG tests/libex29_tests.c:59: 
+----- test_dlclose
