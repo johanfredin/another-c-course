@@ -36,6 +36,11 @@ void *List_remove(List *list, ListNode *node);
 */
 List *List_copy(List *list_to_copy, size_t s);
 
+/*
+ * Merge additional into base
+ */
+void List_join(List *base, List *additional);
+
 #define List_count(L) ((L)->count)
 #define List_is_empty(L) (List_count(L) == 0)
 #define List_first(L) ((L)->first != NULL ? (L)->first->value : NULL)

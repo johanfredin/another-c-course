@@ -1,28 +1,29 @@
-DEBUG tests/list_tests.c:136: ----- RUNNING: ./tests/list_tests
-DEBUG tests/list_tests.c:136: argc=1
-DEBUG tests/list_tests.c:128: 
+DEBUG tests/list_tests.c:175: ----- RUNNING: ./tests/list_tests
+DEBUG tests/list_tests.c:175: argc=1
+DEBUG tests/list_tests.c:166: 
 ----- test_push_front
-DEBUG tests/list_tests.c:129: 
+DEBUG tests/list_tests.c:167: 
 ----- test_push_pop
-DEBUG tests/list_tests.c:130: 
+DEBUG tests/list_tests.c:168: 
 ----- test_pop_front
-DEBUG tests/list_tests.c:131: 
+DEBUG tests/list_tests.c:169: 
 ----- test_remove
-DEBUG tests/list_tests.c:132: 
+DEBUG tests/list_tests.c:170: 
 ----- test_copy
-*** buffer overflow detected ***: terminated
-Aborted (core dumped)
-DEBUG tests/list_tests.c:136: ----- RUNNING: ./tests/list_tests
-DEBUG tests/list_tests.c:136: argc=1
-DEBUG tests/list_tests.c:128: 
+DEBUG tests/list_tests.c:171: 
+----- test_join
+DEBUG tests/list_tests.c:175: ----- RUNNING: ./tests/list_tests
+DEBUG tests/list_tests.c:175: argc=1
+DEBUG tests/list_tests.c:166: 
 ----- test_push_front
-DEBUG tests/list_tests.c:129: 
+DEBUG tests/list_tests.c:167: 
 ----- test_push_pop
-DEBUG tests/list_tests.c:130: 
+DEBUG tests/list_tests.c:168: 
 ----- test_pop_front
-DEBUG tests/list_tests.c:131: 
+DEBUG tests/list_tests.c:169: 
 ----- test_remove
-DEBUG tests/list_tests.c:132: 
+DEBUG tests/list_tests.c:170: 
 ----- test_copy
-*** buffer overflow detected ***: terminated
-Aborted (core dumped)
+DEBUG tests/list_tests.c:171: 
+----- test_join
+[ERROR] (tests/list_tests.c:158: errno: None) Wrong value at

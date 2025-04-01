@@ -123,6 +123,44 @@ char *test_copy() {
 	return tear_down();
 }
 
+char *test_join() {
+	// Set up
+	set_up();
+	int v1 = 1;
+	int v2 = 2;
+	int v3 = 3;
+	List_push(list, &v1);
+	List_push(list, &v2);
+	List_push(list, &v3);
+
+	List *newList = List_create();
+	int v4 = 4;
+	int v5 = 5;
+	int v6 = 6;
+	List_push(newList, &v4);
+	List_push(newList, &v5);
+	List_push(newList, &v6);
+
+	// Act
+	List_join(list, newList);
+
+	// Verify
+	mu_assert(List_count(list) == 6, "Wrong amount");
+	mu_assert(List_first(list) == &v1, "Wrong first value");
+	mu_assert(List_last(list) == &v6, "Wrong last value");
+
+	mu_assert(List_count(newList) == 3, "Count altered for newList");
+
+	int val = 1;
+	for(ListNode *cur = list->first; cur != NULL; cur = cur->next) {
+		int *curVal = (int *) (cur->value);
+		int expected = val++;
+		mu_assert(*curVal == expected, "Wrong value");
+	}
+
+	return tear_down();
+}
+
 char *all_tests() {
 	mu_suite_start();
 	mu_run_test(test_push_front);
@@ -130,6 +168,7 @@ char *all_tests() {
 	mu_run_test(test_pop_front);
 	mu_run_test(test_remove);
 	mu_run_test(test_copy);
+	mu_run_test(test_join);
 	return NULL;
 }
 

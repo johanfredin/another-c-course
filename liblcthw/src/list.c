@@ -137,3 +137,17 @@ error:
 	log_err("Could not copy list");
 	return NULL;
 }
+
+void List_join(List *base, List *additional) {
+	check(base, "Base list is null");
+	check(additional, "Additonal is null");
+	
+	base->last->next = additional->first;
+	additional->first->prev = base->last;
+	base->last = additional->last;
+	base->count += additional->count;
+
+
+error:
+	return;
+}
